@@ -34,15 +34,3 @@ Desenvolvido em Python com interface gráfica tkinter, banco de dados PostgreSQL 
 - **Espaço em Disco:** 500MB livres
 
 ---
-
-## ?? Instalação
-
-### 1. Instalar Python
-
-#### Windows:
-1. Acesse: https://www.python.org/downloads/
-2. Baixe a versão mais recente do Python 3
-3. **IMPORTANTE:** Marque a opção "Add Python to PATH" durante a instalação
-4. Verifique a instalação:
-```bash
-   python --version
