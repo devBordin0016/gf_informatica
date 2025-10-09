@@ -15,22 +15,20 @@ import os
 # Carrega variáveis de ambiente
 load_dotenv()
 
-# Importações locais (serão criadas nas próximas etapas)
-# from ui.login_window import LoginWindow
-# from utils.logger import setup_logger
+# Importações locais
+from ui.login_window import LoginWindow
+from ui.main_window import MainWindow
+from utils.logger import setup_logger
 
 def main():
     """
     Função principal que inicializa a aplicação
     """
-    # Configuração de logging (será implementado na etapa de utils)
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-    )
-    
-    logger = logging.getLogger(__name__)
+    # Configuração de logging
+    logger = setup_logger('gf_informatica')
+    logger.info("=" * 60)
     logger.info("Iniciando GF Informática - Sistema de OS")
+    logger.info("=" * 60)
     
     # Verifica se o arquivo .env existe
     if not os.path.exists('.env'):
@@ -46,14 +44,29 @@ def main():
     root = tk.Tk()
     root.withdraw()  # Esconde a janela principal inicialmente
     
-    # Exibe janela de login (será implementada na etapa de UI)
-    messagebox.showinfo(
-        "GF Informática",
-        "Sistema em construção!\n\n"
-        "A tela de login será implementada na Etapa 6."
-    )
+    # Exibe janela de login
+    login_window = LoginWindow(root, on_login_success=lambda usuario: abrir_sistema(root, usuario))
+    usuario = login_window.show()
     
-    logger.info("Sistema encerrado")
+    if usuario:
+        # Login bem-sucedido - já abriu o sistema
+        root.mainloop()
+    else:
+        logger.info("Login cancelado pelo usuário")
+
+def abrir_sistema(root, usuario):
+    """
+    Abre o sistema após login bem-sucedido
+    
+    Args:
+        root: Janela root do tkinter
+        usuario: Dados do usuário autenticado
+    """
+    # Mostra a janela principal
+    root.deiconify()
+    
+    # Cria janela principal do sistema
+    MainWindow(root, usuario)
 
 if __name__ == "__main__":
     main()
