@@ -1,4 +1,4 @@
-"""
+﻿"""
 Módulo de Conexão com PostgreSQL
 Gerencia a conexão com o banco de dados usando psycopg3
 """
