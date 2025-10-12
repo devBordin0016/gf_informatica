@@ -1,48 +1,110 @@
-# ??? GF Inform�tica - Sistema de Ordem de Servi�o
+# GF Informática - Sistema de Gestão Comercial
 
-Sistema desktop completo para gerenciamento de Ordens de Servi�o (OS) em assist�ncias t�cnicas de computadores.
+Este projeto é um **sistema desktop completo** desenvolvido em **Python**, com o objetivo de **gerenciar ordens de serviço (OS) em assistências técnicas de computadores**.  
+O sistema foi projetado para otimizar o controle de cadastros, serviços prestados e emissão de relatórios em **PDF**, utilizando **interface gráfica com Tkinter** e **banco de dados PostgreSQL** para armazenamento seguro das informações.
 
-Desenvolvido em Python com interface gr�fica tkinter, banco de dados PostgreSQL e gera��o de PDFs profissionais.
-
----
-
-## ?? �ndice
-
-- [Requisitos do Sistema](#-requisitos-do-sistema)
-- [Instala��o](#-instala��o)
-  - [1. Instalar Python](#1-instalar-python)
-  - [2. Instalar PostgreSQL](#2-instalar-postgresql)
-  - [3. Clonar/Baixar o Projeto](#3-clonarbaixar-o-projeto)
-  - [4. Configurar Ambiente Virtual](#4-configurar-ambiente-virtual)
-  - [5. Instalar Depend�ncias](#5-instalar-depend�ncias)
-  - [6. Configurar Banco de Dados](#6-configurar-banco-de-dados)
-  - [7. Executar o Sistema](#7-executar-o-sistema)
-- [Uso do Sistema](#-uso-do-sistema)
-- [Funcionalidades](#-funcionalidades)
-- [Solu��o de Problemas](#-solu��o-de-problemas)
-- [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+Este trabalho foi desenvolvido como parte de um **projeto acadêmico** do curso de **Ciência da Computação**, aplicando conceitos de **banco de dados, arquitetura modular e automação de processos comerciais**.  
 
 ---
 
-## ?? Requisitos do Sistema
+## 🧩 Tecnologias Utilizadas
 
-- **Sistema Operacional:** Windows 10/11, Linux ou macOS
-- **Python:** 3.10 ou superior (testado em 3.13)
-- **PostgreSQL:** 14 ou superior
-- **RAM:** M�nimo 2GB
-- **Espa�o em Disco:** 500MB livres
+- 🐍 **Python** → Linguagem principal utilizada para o desenvolvimento do sistema e automação das funcionalidades.  
+- 🖥️ **Tkinter** → Biblioteca padrão do Python para criação da **interface gráfica desktop**.  
+- 🗃️ **PostgreSQL** → Banco de dados relacional responsável pelo armazenamento das informações de clientes, serviços e ordens.  
+- 🧮 **PL/pgSQL** → Linguagem procedural utilizada no PostgreSQL para consultas e funções personalizadas no banco.  
+- 🧾 **ReportLab / FPDF** → Biblioteca de geração de **relatórios e PDFs profissionais**.  
+- ⚙️ **python-dotenv** → Utilizada para gerenciar variáveis de ambiente (.env) e credenciais do banco.  
+- 🔌 **psycopg2** → Driver responsável pela conexão entre o Python e o banco de dados PostgreSQL.
 
 ---
 
-## ?? Instala��o
+## 🧩 Estrutura do Projeto
 
-### 1. Instalar Python
-
-#### Windows:
-1. Acesse: https://www.python.org/downloads/
-2. Baixe a vers�o mais recente do Python 3
-3. **IMPORTANTE:** Marque a op��o "Add Python to PATH" durante a instala��o
-4. Verifique a instala��o:
 ```bash
-   python --version
+├── database/              # Módulo responsável pelo banco de dados e tabelas
+├── logs/                  # Armazena logs de execução e erros do sistema
+├── services/              # Contém as regras de negócio e funções principais do sistema
+├── ui/                    # Interface do usuário (camada visual)
+├── utils/                 # Funções auxiliares e utilitárias
+│
+├── .env.example           # Exemplo de variáveis de ambiente
+├── .gitignore             # Arquivos ignorados pelo Git
+├── README.md              # Documentação do projeto
+├── debug_pdf.py           # Script de depuração para geração de PDFs
+├── main.py                # Arquivo principal para executar o sistema
+├── requirements.txt       # Dependências do projeto
+├── reset_admin_password.py # Script para redefinir senha do admin
+├── test_connection.py     # Teste de conexão com o banco de dados
+└── test_services.py       # Testes automatizados das funções de serviço
+```
+
+---
+
+## ⚙️ Funcionalidades
+
+- Cadastro e gerenciamento de clientes e serviços.  
+- Geração automática de relatórios e documentos em PDF.  
+- Sistema de logs para auditoria de eventos.  
+- Interface simples e responsiva com Bootstrap.  
+- Scripts de teste e manutenção do sistema.  
+- Interface gráfica intuitiva desenvolvida com Tkinter.
+
+---
+
+## 🚀 Como Executar o Projeto
+
+Siga as etapas abaixo para rodar o sistema localmente.
+
+1. **Clone este repositório**
+
+   ```bash
+   git clone https://github.com/devBordin0016/gf_informatica.git
+   cd gf_informatica
+
+2. **Crie o ambiente virtual**
+
+    ```bash
+    python -m venv venv
+    venv\Scripts\activate  # (Windows)
+    source venv/bin/activate  # (Linux/Mac)
+    ```
+
+3. **Instale as dependências**
+
+    ```bash
+    pip install -r requirements.txt
+
+4. **Configure o arquivo `.env`**
+
+    - Copie o arquivo `.env.example` e renomeie para `.env`
+    - Ajuste as variáveis conforme o ambiente local (exemplo: credenciais de banco, caminhos de logs, etc.)
+
+5. **Execute o sistema**
+
+    ```bash
+    python main.py
+
+---
+
+## 📦 Requisitos do Sistema
+
+- Python 3.10 ou superior  
+- PostgreSQL 14+  
+- Sistema operacional: Windows 10/11 ou Linux  
+- Biblioteca ReportLab instalada  
+- Conexão configurada via arquivo `.env`
+
+---
+
+## 📚 Artigos Científicos
+
+> Ambos foram produzidos como parte das atividades avaliativas da disciplina **Arquitetura e Organização de Computadores**, sob orientação do professor **Eduardo Furlan**.
+
+## 👨‍💻 Equipe
+
+- **Gustavo de Lima** – Documentação, artigos, diário de bordo, apresentações e testes.  
+- **Fernando Bordin** – Desenvolvimento, banco de dados, testes e geração de relatórios.  
+- **Curso:** Ciência da Computação  
+- **Disciplina:** Arquitetura e Organização de Computadores  
+- **Professor:** Eduardo Furlan
