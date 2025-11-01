@@ -45,8 +45,7 @@ Este trabalho foi desenvolvido como parte de um **projeto acadêmico** do curso 
 
 - Cadastro e gerenciamento de clientes e serviços.  
 - Geração automática de relatórios e documentos em PDF.  
-- Sistema de logs para auditoria de eventos.  
-- Interface simples e responsiva com Bootstrap.  
+- Sistema de logs para auditoria de eventos.    
 - Scripts de teste e manutenção do sistema.  
 - Interface gráfica intuitiva desenvolvida com Tkinter.
 
@@ -99,12 +98,19 @@ Siga as etapas abaixo para rodar o sistema localmente.
 
 ## 📚 Artigos Científicos
 
-> Ambos foram produzidos como parte das atividades avaliativas da disciplina **Arquitetura e Organização de Computadores**, sob orientação do professor **Eduardo Furlan**.
+> Ambos foram produzidos como parte das atividades avaliativas da disciplina **Arquitetura e Organização de Computadores** e **Modelagem de Dados**, sob orientação do professor **Eduardo Furlan**.
+
+> [DESENVOLVIMENTO DE UM SISTEMA DE GESTÃO COMERCIAL EM PYTHON : APLICAÇÃO DE ARQUITETURA MODULAR E BANCO DE DADOS RELACIONAL](articles/artigo1.pdf)
+> [METODOLOGIA MODULAR NO DESENVOLVIMENTO DE SISTEMAS DESKTOP EM PYTHON: ESTUDO DE CASO GF INFORMÁTICA](articles/artigo2.pdf)
+
+## 📓 Diário de Bordo
+
+[DIÁRIO DE BORDO DO PROJETO](articles/diario_de_bordo.pdf)
 
 ## 👨‍💻 Equipe
 
 - **Gustavo de Lima** – Documentação, artigos, diário de bordo, apresentações e testes.  
 - **Fernando Bordin** – Desenvolvimento, banco de dados, testes e geração de relatórios.  
 - **Curso:** Ciência da Computação  
-- **Disciplina:** Arquitetura e Organização de Computadores  
+- **Disciplina:** Arquitetura e Organização de Computadores (Gustavo) e Modelagem de Dados (Fernando)  
 - **Professor:** Eduardo Furlan
