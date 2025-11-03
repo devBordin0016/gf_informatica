@@ -23,6 +23,3 @@ ENV/
 # OS
 .DS_Store
 Thumbs.db
-
-# PDFs gerados (opcional, depende se quer versionar)
-*.pdf
